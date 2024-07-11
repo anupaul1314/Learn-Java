@@ -21,7 +21,15 @@ public class ArthmeticOperators {
         System.out.println(div);//0.8
 
         //modulus
-        double modul = num2%num1;
-        System.out.println(modul);//1
+        double modulu = num2%num1;
+        System.out.println(modulu);//1
+
+        //uniary operator
+        int numb = 1;
+        System.out.println(numb++); //1
+        System.out.println(numb); //2
+        System.out.println(++numb);//3
+        System.out.println(numb);//3
+        //Same for Subtraction
     }
 }
