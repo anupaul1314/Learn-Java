@@ -21,7 +21,7 @@ public class DataTypes {
         //Non-Primitive Datatypes
 
         String name = "Any";
-        String friend = new String("Adam");
+        String friend = "Adam";
         System.out.println(name.length());  //ANY
     }
 }
