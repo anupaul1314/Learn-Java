@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
 public class RecursiveHcf {
-    public static int recursivehcf(int a,int b) {
+    public static void recursivehcf() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter two postive integer : ");
-        a = sc.nextInt();
-        b = sc.nextInt();
-
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int cd = 0;
         if (b == 0) {
             System.out.println(a);
         } else {
-            int cd = recursivehcf(b, a % b);
-            System.out.println(cd);
+            System.out.println(b+a%b);
         }
     }
 

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class MissingArray {
-    public static void missing(){
+public class SearchArrayElement {
+    public static void seachElement(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter element : ");
         int element = sc.nextInt();
@@ -14,12 +14,12 @@ public class MissingArray {
         }
         for(int i = 0; i < noOfElements; i++){
             if (arr[i]==element){
-                System.out.println("Element Found :"+ arr[i]);
+                System.out.println("Element Found at index : " + i );
             }
         }
     }
 
     public static void main(String[] args) {
-        missing();
+        seachElement();
     }
 }
