@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.Collections;
+
+import static java.util.Collections.swap;
 
 public class LargestElement {
     public static void largestelementindex(int[] arr) {
@@ -59,7 +62,37 @@ public class LargestElement {
         System.out.println(Arrays.toString(arr1));
     }
 
+    public static void removeDuplicate(int[] arr){
+        int duplicate =1;
+        for (int i =1; i< arr.length; i++){
+            if (arr[i]!=arr[duplicate-1]){
+                arr[duplicate] = arr[i];
+                duplicate++;
+            }
+        }
+        for (int i = 0; i < duplicate; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static void moveZeros(int[] arr){
+            int count = 0;
+            for (int i =0; i< arr.length;i++){
+                if (arr[i]!=0){
+                     swap(arr,i,count);
+                     count++;
+                }
+            }
+        System.out.println(Arrays.toString(arr));
+    }
+
     public static void main(String[] args) {
-        reverseArray(new int[]{8,12,20,50,80,24,56});
+        moveZeros(new int[]{1,2,0,0,9,8});
     }
 }
