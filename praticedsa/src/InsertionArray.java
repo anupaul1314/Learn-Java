@@ -1,7 +1,6 @@
 public class InsertionArray {
     public static void main(String[] args) {
-        insertionAtPosition(
-                new int[]{1, 2, 4, 5, 6 },3,2);
+        insertionWithoutNewArray(new int[]{1, 2, 4, 5, 6 },3,2);
     }
     public static void insertionAtPosition(int[] arr, int insertElement,int indexno ){
         int[] newarr = new int[arr.length+1];
@@ -24,5 +23,18 @@ public class InsertionArray {
     public static void printArray(int[] arr){
         for (int i = 0;i<arr.length;i++)
             System.out.println(arr[i]);
+    }
+
+    public static void insertionWithoutNewArray( int[] arr, int x, int pos ){
+        int n = arr.length;
+        int cap = 6;
+        if (n == cap)
+            System.out.println(n);
+        int idx = pos-1;
+        for (int i = n-1; i>=idx; i--){
+            arr[i+1] = arr[i];
+        }
+        arr[idx] = x;
+        System.out.println(n+1);
     }
 }

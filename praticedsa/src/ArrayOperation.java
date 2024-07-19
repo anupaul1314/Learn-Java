@@ -55,6 +55,7 @@ public class ArrayOperation {
         }
     }
 
+
     public static void main(String[] args) {
         frequenciesOfElement(new int[]{10,10,10,20,20,30,30});
     }
