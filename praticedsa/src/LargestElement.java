@@ -63,7 +63,7 @@ public class LargestElement {
     }
 
     public static void removeDuplicate(int[] arr){
-        int duplicate =1;
+        int duplicate = 1;
         for (int i =1; i< arr.length; i++){
             if (arr[i]!=arr[duplicate-1]){
                 arr[duplicate] = arr[i];
@@ -93,6 +93,7 @@ public class LargestElement {
     }
 
     public static void main(String[] args) {
-        moveZeros(new int[]{1,2,0,0,9,8});
+        //moveZeros(new int[]{1,2,0,0,9,8});
+        removeDuplicate(new int[]{1,2,0,0,9,8});
     }
 }
