@@ -14,6 +14,9 @@ public class ImplementationOfCircularSLL {
         head.next.next.next = new CircularNode(40);
         head.next.next.next.next = head;
         //head = insertAtStart(head,0);
+        //head = insertAtEnd(head,50);
+        //head = deleteFromStart(head);
+        head = deleteKthNode(head,2);
         traverseLL(head);
     }
 
@@ -42,7 +45,37 @@ public class ImplementationOfCircularSLL {
 
     public static CircularNode insertAtEnd(CircularNode head, int data){
         CircularNode newH = new CircularNode(data);
-        if (head==null){return newH;}
-        
+        if (head==null){
+            newH.next = newH;
+            return newH;
+        }
+        CircularNode curr = head;
+        while (curr.next!=head){
+            curr = curr.next;
+        }
+        curr.next = newH;
+        newH.next = head;
+        return head;
+    }
+
+    public static CircularNode deleteFromStart(CircularNode head){
+        if (head==null){return head;}
+        CircularNode curr = head;
+        while (curr.next!= head){
+            curr = curr.next;
+        }
+        curr.next = head.next;
+        return curr.next;
+    }
+
+    public static CircularNode deleteKthNode(CircularNode head, int k){
+        if (head==null){return head;}
+        if (k==1){deleteFromStart(head);}
+        CircularNode curr = head;
+        for (int i =0; i<k-2;i++){
+            curr = curr.next;
+        }
+        curr.next = curr.next.next;
+        return head;
     }
 }
