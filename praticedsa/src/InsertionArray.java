@@ -10,7 +10,7 @@ public class InsertionArray {
             newarr[i] =arr[i];
         }
 
-        // alot the value of new element to the position
+        // Alot the value of new element to the position
         newarr[indexno] = insertElement;
 
         // insert remaining element to new array with index number+1
@@ -21,7 +21,7 @@ public class InsertionArray {
     }
 
     public static void printArray(int[] arr){
-        for (int i = 0;i<arr.length;i++)
+        for (int i = 0; i<arr.length; i++)
             System.out.println(arr[i]);
     }
 

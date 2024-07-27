@@ -25,7 +25,9 @@ public class ImplementationOfCircularDLL {
         fourth.next = head;
         fourth.prev = third;
         //head = insertAtHead(head,0);
-        head = insertInaSortedLL(head,35);
+        //head = insertInaSortedLL(head,35);
+        //middleNode(head);
+        head = reverseLL(head);
         traverse(head);
     }
     public static void traverse(DoublyCircular head){
@@ -64,6 +66,36 @@ public class ImplementationOfCircularDLL {
         newNode.next = curr.next;
         curr.next = newNode;
         return head;
+    }
+
+    public static DoublyCircular middleNode(DoublyCircular head){
+        if (head==null){return null;}
+        DoublyCircular slow = head;
+        DoublyCircular fast = head;
+
+        // Using the slow and fast pointer technique to find the middle
+        do {
+            fast = fast.next;
+            if (fast != head) {
+                fast = fast.next;
+                slow = slow.next;
+            }
+        } while (fast != head && fast.next != head);
+
+        System.out.println(slow.data);
+        return slow;
+    }
+
+    public static DoublyCircular reverseLL(DoublyCircular head){
+        DoublyCircular cuur = head;
+        DoublyCircular prev = null;
+        while (cuur!=null){
+            DoublyCircular next = cuur.next;
+            cuur.next = prev;
+            prev = cuur;
+            cuur = next;
+        }
+        return prev;
     }
 }
 
