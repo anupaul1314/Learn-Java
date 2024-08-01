@@ -9,7 +9,9 @@ public class OperationsOnString {
         //subsequencesStr("subsequence","sue");
         //isAnagram("listen","silent");
         //leftMost("abbcc");
-        reverseWords("I am going");
+        //reverseWords("I am going");
+        //patSearch("ABCABCD","ABCD");
+        patSearchDist("ABCABCD","ABCD");
     }
 
     public static void frequenciesOfElements() {
@@ -121,5 +123,42 @@ public class OperationsOnString {
             }
         }
         System.out.println(reversed);
+    }
+
+    public static void patSearch(String str, String pat){
+        int n = str.length();
+        int m = pat.length();
+        for (int i = 0; i <= n - m; i++){
+            int j;
+            for (j=0; j<m; j++){
+                if (pat.charAt(j) != str.charAt(i + j)){
+                    break;
+                }
+            }
+            if (j==m){
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void patSearchDist(String txt, String patrn){
+        int n = txt.length();
+        int m = patrn.length();
+        for (int i=0; i<=n-m;){
+            int j;
+            for (j=0; j<m; j++){
+                if (patrn.charAt(j) != txt.charAt(i+j)){
+                    break;
+                }
+            }
+            if (j==m){
+                System.out.println(i+" ");
+            }
+            if (j==0){
+                i++;
+            }else {
+                i=i+j;
+            }
+        }
     }
 }
