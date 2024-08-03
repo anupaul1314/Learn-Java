@@ -5,7 +5,11 @@ public class MultiArrayOperation {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        printArr(array);
+        //printArr(array);
+
+        int m = 2; int n = 3;
+        int[][] arr = new int[m][n];
+        //printArr(arr);
     }
 
     public static void printArr(int[][] arr){
@@ -13,6 +17,7 @@ public class MultiArrayOperation {
             for (int j=0; j< arr[i].length; j++){
                 System.out.println(arr[i][j] + " ");
             }
+            System.out.println();
         }
     }
 }
