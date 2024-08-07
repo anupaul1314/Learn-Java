@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Learn Java.iml" filepath="$PROJECT_DIR$/Learn Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/praticedsa/Multidimensionarr/Multidimensionarr.iml" filepath="$PROJECT_DIR$/praticedsa/Multidimensionarr/Multidimensionarr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/praticedsa/Strings/Strings.iml" filepath="$PROJECT_DIR$/praticedsa/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/praticedsa/multidimensionarr/Multidimensionarr.iml" filepath="$PROJECT_DIR$/praticedsa/multidimensionarr/Multidimensionarr.iml" />
       <module fileurl="file://$PROJECT_DIR$/praticedsa/linkedlist/linkedlist.iml" filepath="$PROJECT_DIR$/praticedsa/linkedlist/linkedlist.iml" />
       <module fileurl="file://$PROJECT_DIR$/praticedsa/praticedsa.iml" filepath="$PROJECT_DIR$/praticedsa/praticedsa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/praticedsa/stack/stack.iml" filepath="$PROJECT_DIR$/praticedsa/stack/stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/praticedsa/strings/strings.iml" filepath="$PROJECT_DIR$/praticedsa/strings/strings.iml" />
     </modules>
   </component>
 </project>
