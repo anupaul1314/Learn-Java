@@ -181,7 +181,7 @@ public class OperationsOnString {
     }
 
     public static int romanCharToInt(char c){
-        switch (c){
+        switch (c) {
             case 'I' : return 1;
             case 'V' : return 5;
             case 'X' : return 10;
