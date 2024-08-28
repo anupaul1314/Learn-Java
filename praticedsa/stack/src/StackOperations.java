@@ -6,7 +6,10 @@ public class StackOperations {
         //previousGreaterElemet(new int[]{20,30,10,5,15});
         //previousGreaterElemtThroughStack(new int[]{20,30,10,5,15});
         //nextGreaterElement(new int[]{5,15,10,8,6,12,9,18});
-        nextGreaterElemtThroughStack(new int[]{5,15,10,8,6,12,9,18});
+        //nextGreaterElemtThroughStack(new int[]{5,15,10,8,6,12,9,18});
+        //LargestRectangularArea(new int[]{6,2,5,4,1,5,6});
+        infixToPostfix(new String[]{"3", "+", "5", "*", "2"});
+
     }
 
     public static boolean isBalanced(String str) {
@@ -73,12 +76,12 @@ public class StackOperations {
                 }
 
             }
-            if (j== arr.length) {
+            if (j == arr.length) {
                 System.out.println(-1);
             }
         }
     }
-    public static void nextGreaterElemtThroughStack(int[] arr) {
+    public static void nextGreaterElementThroughStack(int[] arr) {
         Stack<Integer> stack = new Stack<>();
         stack.push(arr[arr.length-1]);
         System.out.println(-1);
@@ -91,6 +94,63 @@ public class StackOperations {
             stack.push(arr[i]);
         }
     }
+
+    public static int LargestRectangularArea(int[] arr) {
+        int n = arr.length;
+        int result = 0;
+        for (int i =0; i<n; i++) {
+           int current = arr[i];
+            for (int j=i-1; j>=0; j--) {
+                if ( arr[j] >= arr[i]) {
+                    current+=arr[i];
+                }else break;
+            }
+            for (int j=i+1; j<n; j++) {
+                if ( arr[j] >= arr[i]) {
+                    current+=arr[i];
+                }else break;
+            }
+            result = Math.max(result,current);
+        }
+        System.out.println(result);
+        return result;
+    }
+
+    public static String infixToPostfix(String[] arr) {
+        Stack<String> stack = new Stack<>();
+        StringBuilder result = new StringBuilder();
+
+        for (String token : arr) {
+            if (isOperator(token)) {
+                while (!stack.isEmpty() && precedence(stack.peek()) >= precedence(token)) {
+                    result.append(stack.pop()).append(" ");
+                }
+                stack.push(token);
+            } else {
+                result.append(token).append(" ");
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            result.append(stack.pop()).append(" ");
+        }
+        System.out.println(result.toString().trim());
+        return result.toString().trim();
+    }
+    private static boolean isOperator(String token) {
+        return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/");
+    }
+    private static int precedence(String operator) {
+        switch (operator) {
+            case "+": case "-":
+                return 1;
+            case "*": case "/":
+                return 2;
+            default:
+                return -1;
+        }
+    }
+
 
 }
 
