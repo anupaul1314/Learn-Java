@@ -11,7 +11,10 @@ public class SearchingOperations {
         //searchPeakElement(new int[] {5,80,40,30,20,50,60});
         //twoSum(new int[]{2, 7, 11, 15, -2, 8}, 9);
         //twoSum(new int[]{8, 4, 6}, 17);
-        twoSumUsingTwoPointerApproach(new int[]{2, 7, 11, 15, -2, 8}, 9);
+        //twoSumUsingTwoPointerApproach(new int[]{2, 7, 11, 15, -2, 8}, 9);
+        //check(new int[]{3,4,5,1,2});
+        medianTwoSortedArray(new int[] {1,2,3,4,5,6}, new int[] {10,20,30,40,50});
+        medianTwoSortedArray(new int[] {10,20,30,40,50}, new int[] {5,15,25,35,45});
     }
 
     public static int binarySearchingInArray(int[] arr, int element) {
@@ -139,5 +142,32 @@ public class SearchingOperations {
             }
         }
         System.out.println("No Pair Exists");
+    }
+
+    public static boolean check(int[] nums) {
+        int temp = nums[0];
+        for(int i=1; i<nums.length; i++) {
+            if(nums[temp]<nums[i-1]) {
+                System.out.println(true);
+                return true;
+            }
+        }
+        System.out.println(false);
+        return false;
+    }
+
+    public static void medianTwoSortedArray(int[] arr1, int[] arr2) {
+        int[] arr = new int[arr1.length + arr2.length];
+        System.arraycopy(arr1,0,arr,0,arr1.length);
+        System.arraycopy(arr2, 0, arr, arr1.length, arr2.length);
+        //System.out.println("Merged Array: " + Arrays.toString(arr));
+        int length = arr.length;
+        double median;
+        if (length % 2 != 0) {
+            median = arr[length / 2];
+        } else {
+            median = (arr[(length / 2) - 1] + arr[length / 2]) / 2.0;
+        }
+        System.out.println("Median: " + median);
     }
 }
