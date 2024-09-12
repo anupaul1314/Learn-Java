@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Learn Java.iml" filepath="$PROJECT_DIR$/Learn Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/praticedsa/multidimensionarr/Multidimensionarr.iml" filepath="$PROJECT_DIR$/praticedsa/multidimensionarr/Multidimensionarr.iml" />
       <module fileurl="file://$PROJECT_DIR$/praticedsa/basicconcepts/basicconcepts.iml" filepath="$PROJECT_DIR$/praticedsa/basicconcepts/basicconcepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/praticedsa/dequeue/dequeue.iml" filepath="$PROJECT_DIR$/praticedsa/dequeue/dequeue.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/json.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/json.test.iml" filepath="$PROJECT_DIR$/.idea/modules/json.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/praticedsa/linkedlist/linkedlist.iml" filepath="$PROJECT_DIR$/praticedsa/linkedlist/linkedlist.iml" />
